@@ -11,7 +11,7 @@ export default configureStore({
       storage: storage
     },
     combineReducers({
-      user: user.reducers
+      counter : counter.reducers
     })
   )
 })
