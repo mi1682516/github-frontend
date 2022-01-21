@@ -7,6 +7,12 @@ function Home(){
   )
 }
 
+function test(){
+  return (
+    <h2>Test</h2> 
+  )
+}
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +20,10 @@ function App() {
         <Router.Route
           path="/"
           element={<Home />}
+        />
+        <Router.Route 
+          path="/test"
+          element={<Test />}
         />
       </Router.Routes>
     </div>
