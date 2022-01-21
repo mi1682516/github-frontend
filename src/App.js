@@ -7,7 +7,7 @@ function Home(){
   )
 }
 
-function test(){
+function Test(){
   return (
     <h2>Test</h2> 
   )
