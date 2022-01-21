@@ -13,3 +13,7 @@ const counter = createSlice({
     }
   }
 })
+
+export const {increment} = counter.actions
+
+export default counter
