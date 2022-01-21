@@ -3,7 +3,9 @@ import * as Router from 'react-router-dom';
 
 function Home(){
   return (
-    <h2>Home</h2>
+    <div className="Home">
+      <button type="button" className="btn btn-primary">Primary</button>
+    </div>
   )
 }
 
@@ -27,7 +29,7 @@ function App() {
         />
       </Router.Routes>
     </div>
-  );
+  )
 }
 
 export default App;
