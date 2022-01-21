@@ -9,9 +9,11 @@ import { persistStore } from 'reduxjs-toolkit-persist'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router.BrowserRouter>
-      <App />
-    </Router.BrowserRouter>
+    <Provider store={store} >
+      <Router.BrowserRouter>
+        <App />
+      </Router.BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
