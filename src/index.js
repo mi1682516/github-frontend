@@ -6,7 +6,11 @@ import * as Router from 'react-router-dom'
 ReactDOM.render(
   <React.StrictMode>
     <Router.BrowserRouter>
-      <App />
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistStore(store)}>   
+          <App />
+        </PersistGate>
+      </Provider>
     </Router.BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

@@ -23,8 +23,6 @@ function Test(){
 function App() {
   return (
     <div className="App">
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistStore(store)}>   
             <Router.Routes>
               <Router.Route
                 path="/"
@@ -35,8 +33,6 @@ function App() {
                 element={<Test />}
               />
             </Router.Routes>
-          </PersistGate>
-        </Provider>
     </div>
   )
 }
