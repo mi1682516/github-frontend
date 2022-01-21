@@ -5,13 +5,9 @@ import * as Router from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistStore(store)}>   
-        <Router.BrowserRouter>
-          <App />
-        </Router.BrowserRouter>
-      </PersistGate>
-    </Provider>
+    <Router.BrowserRouter>
+      <App />
+    </Router.BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
