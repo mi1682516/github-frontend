@@ -1,5 +1,10 @@
 import React from 'react';
 import * as Router from 'react-router-dom';
+import store from './redux/configureStore'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'reduxjs-toolkit-persist'
+import { persistStore } from 'reduxjs-toolkit-persist'
+
 
 function Home(){
   return (
@@ -18,16 +23,20 @@ function Test(){
 function App() {
   return (
     <div className="App">
-      <Router.Routes>
-        <Router.Route
-          path="/"
-          element={<Home />}
-        />
-        <Router.Route 
-          path="/test"
-          element={<Test />}
-        />
-      </Router.Routes>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistStore(store)}>   
+            <Router.Routes>
+              <Router.Route
+                path="/"
+                element={<Home />}
+              />
+              <Router.Route 
+                path="/test"
+                element={<Test />}
+              />
+            </Router.Routes>
+          </PersistGate>
+        </Provider>
     </div>
   )
 }
