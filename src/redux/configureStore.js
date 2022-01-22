@@ -4,14 +4,14 @@ import storage from 'reduxjs-toolkit-persist/lib/storage'
 
 import counter from './reducers/counter'
 
+const reducers = combineReducers({
+  counter : counter
+})
+
+const config = {key : 'root',storage}
+
 export default configureStore({
-  reducer: persistReducer(
-    {
-      key: 'root',
-      storage: storage
-    },
-    combineReducers({
-      counter : counter.reducers
-    })
+  reducer : persistReducer(
+    config,reducers
   )
 })
