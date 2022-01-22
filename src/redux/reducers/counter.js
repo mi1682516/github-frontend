@@ -7,13 +7,7 @@ const counter = createSlice({
       v : 0
     }
   },
-  reducers : {
-    increment : (state) => {
-      state.value.v++
-    }
-  }
+  reducers : {}
 })
-
-export const {increment} = counter.actions
 
 export default counter.reducer
