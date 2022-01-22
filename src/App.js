@@ -20,6 +20,7 @@ function Test(){
 function App() {
   return (
     <div className="App">
+      <Router.BrowserRouter>
             <Router.Routes>
               <Router.Route
                 path="/"
@@ -30,6 +31,7 @@ function App() {
                 element={<Test />}
               />
             </Router.Routes>
+      </Router.BrowserRouter>
     </div>
   )
 }
