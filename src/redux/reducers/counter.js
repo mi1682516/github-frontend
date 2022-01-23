@@ -4,10 +4,16 @@ const counter = createSlice({
   name: 'counter',
   initialState: {
     value: {
-      v: 0
+      v:0
     }
   },
-  reducers: {}
+  reducers: {
+    increment : (state) => {
+      state.value.v++
+    }
+  }
 })
+
+export const {increment} = counter.actions
 
 export default counter

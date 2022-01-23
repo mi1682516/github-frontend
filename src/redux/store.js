@@ -7,7 +7,7 @@ import counter from './reducers/counter'
 const config = {key:'root',storage}
 
 const reducers = combineReducers({
-  counter : counter.reducers
+  counter : counter.reducer
 })
 
 export default configureStore({
