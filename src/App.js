@@ -1,6 +1,7 @@
 import React from 'react';
 import * as redux from 'react-redux';
 import * as Router from 'react-router-dom';
+import * as counter from './redux/reducers/counter'
 
 function Home(){
   return (
@@ -9,9 +10,9 @@ function Home(){
 }
 
 function App() {
-  redux.useSelector(({counter}) => {
-    console.log(counter)
-  })
+  console.log(
+    counter
+  )
 
   return (
     <div className="App">
